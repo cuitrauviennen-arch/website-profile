@@ -1,0 +1,815 @@
+/* Layout for Hero */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centered as per screenshot */
+  padding: 5rem 0 3rem;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: var(--accent-light);
+  text-transform: uppercase;
+  font-family: var(--font-serif);
+  letter-spacing: 0.05em;
+}
+
+.titleWrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  font-weight: 300;
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* Yellow underline stroke for subtitle */
+.titleWrapper::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 4px;
+  z-index: 0;
+  animation: drawLine 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes drawLine {
+  to {
+    width: 100%;
+  }
+}
+
+/* Profile Image */
+.profileImageWrapper {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 1.5rem auto 3rem auto;
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
+  border: 2px solid var(--accent-color);
+  padding: 4px;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.profileImageWrapper:hover {
+  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4), 0 0 20px rgba(212, 175, 55, 0.6);
+  border-color: var(--accent-light);
+  transform: translateY(-5px) scale(1.02);
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.profileImageWrapper:hover .profileImage {
+  transform: scale(1.05);
+}
+
+/* Bio Text */
+.heroBio {
+  max-width: 850px;
+  font-size: 1rem;
+  color: var(--text-primary);
+  line-height: 1.8;
+  text-align: left; /* Left align text block but centered in container */
+  margin: 0 auto 2rem auto;
+}
+
+.heroBio p {
+  margin-bottom: 1.2rem;
+}
+
+.heroBio strong {
+  font-weight: 700;
+  color: var(--accent-light);
+}
+
+/* Rest of the sections */
+.section {
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  text-align: left;
+  display: inline-block;
+  position: relative;
+  font-family: var(--font-serif);
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--accent-color);
+  border-radius: 2px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 40px;
+  width: 2px;
+  background: rgba(212, 175, 55, 0.3);
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 100px;
+}
+
+.timelineLogo {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  border: 2px solid var(--accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  z-index: 1;
+}
+
+.timelineLogo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card {
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  background-color: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  box-shadow: var(--glass-shadow);
+  color: var(--text-secondary);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.2rem;
+}
+
+.cardSubtitle {
+  font-size: 1rem;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.cardPeriod {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 0.2rem;
+  font-weight: 500;
+}
+
+.cardContent {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.cardContent p {
+  margin-bottom: 0.8rem;
+}
+
+@media (max-width: 600px) {
+  .timeline::before {
+    left: 20px;
+  }
+  .timelineItem {
+    padding-left: 60px;
+  }
+  .timelineLogo {
+    left: 0;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Custom Carousel Styles */
+.carouselContainer {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 1rem 0 2rem 0;
+}
+
+.carouselViewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.carouselSlide {
+  flex-shrink: 0;
+  padding: 0 1rem;
+}
+
+.carouselDots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1.5rem;
+}
+
+.carouselDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.carouselDotActive {
+  background: var(--accent-color);
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.awardCard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(5,10,20,0.8) 100%);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.awardCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.awardCard::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(212, 175, 55, 0);
+  transition: box-shadow 0.4s ease;
+  z-index: 2;
+}
+
+.awardCard:hover::after {
+  box-shadow: inset 0 0 0 1px rgba(212, 175, 55, 0.3), inset 0 0 20px rgba(212, 175, 55, 0.1);
+}
+
+.awardImageWrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+}
+
+.awardImage {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));
+}
+
+.awardCard:hover .awardImage {
+  transform: scale(1.1);
+}
+
+.awardInfo {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0) 100%);
+}
+
+.awardYear {
+  font-size: 0.8rem;
+  color: var(--accent-light);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  background: rgba(212, 175, 55, 0.15);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  width: max-content;
+}
+
+.awardTitle {
+  font-size: 1.15rem;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+.awardOrganization {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.awardOrganization::before {
+  content: '';
+  width: 12px;
+  height: 1px;
+  background: var(--text-secondary);
+}
+
+/* Bento Grid Projects — Cinematic Reveal */
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 340px;
+  gap: 1.4rem;
+  margin-top: 2rem;
+}
+
+.bentoItem {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  cursor: pointer;
+  display: block;
+  isolation: isolate;
+  text-decoration: none;
+  transition: transform .5s cubic-bezier(.2,.8,.2,1),
+              border-color .5s cubic-bezier(.2,.8,.2,1),
+              box-shadow .5s cubic-bezier(.2,.8,.2,1);
+}
+
+.bentoImageWrapper { position: absolute; inset: 0; z-index: 0; }
+.bentoImage {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: saturate(.85);
+  transition: transform .9s cubic-bezier(.2,.8,.2,1), filter .6s ease;
+}
+
+/* navy scrim so text stays readable */
+.bentoItem::before {
+  content: ''; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(180deg, rgba(5,10,20,.05) 0%, rgba(5,10,20,.35) 45%, rgba(5,10,20,.92) 100%);
+  transition: background .6s ease;
+}
+/* glowing gold edge */
+.bentoItem::after {
+  content: ''; position: absolute; inset: 0; z-index: 2;
+  border-radius: 20px; pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(212,175,55,0);
+  transition: box-shadow .5s ease;
+}
+
+.bentoContent {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 3;
+  padding: 1.6rem 1.7rem;
+}
+
+.bentoCategory {
+  font-size: .72rem; text-transform: uppercase; letter-spacing: .14em;
+  font-weight: 700; color: var(--accent-color);
+  margin-bottom: .5rem; display: flex; align-items: center; gap: .5rem;
+}
+.bentoCategory::before {
+  content: ''; width: 18px; height: 1px; background: var(--accent-color);
+  transition: width .5s ease;
+}
+
+.bentoTitle {
+  font-family: var(--font-serif); font-weight: 700; font-size: 1.3rem;
+  color: #fff; line-height: 1.25; margin-bottom: .2rem;
+}
+
+/* hidden block that slides open */
+.bentoReveal {
+  display: grid; grid-template-rows: 0fr; opacity: 0;
+  transition: grid-template-rows .55s cubic-bezier(.2,.8,.2,1), opacity .45s ease .05s;
+}
+.bentoReveal > div { overflow: hidden; }
+
+.bentoDescription {
+  color: var(--text-secondary); font-size: .92rem; line-height: 1.55;
+  margin: .7rem 0 1rem;
+}
+
+.bentoFoot { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+.bentoMetric {
+  display: inline-flex; align-items: baseline; gap: .25rem;
+  background: rgba(212,175,55,.12); border: 1px solid rgba(212,175,55,.3);
+  padding: .35rem .6rem; border-radius: 99px;
+  min-width: 0;
+}
+.bentoMetric .num { font-family: var(--font-serif); font-weight: 900; color: var(--accent-light); font-size: 0.9rem; flex-shrink: 0; }
+.bentoMetric .lbl { 
+  font-size: .65rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: .06em; 
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; 
+}
+.bentoArrow {
+  width: 38px; height: 38px; border-radius: 50%; flex: none;
+  border: 1px solid rgba(212,175,55,.4); color: var(--accent-color);
+  display: flex; align-items: center; justify-content: center; font-size: 1.05rem;
+  transition: background .4s ease, color .4s ease, transform .4s ease;
+}
+
+/* HOVER */
+.bentoItem:hover { transform: translateY(-6px); border-color: rgba(212,175,55,.45); box-shadow: 0 22px 45px rgba(0,0,0,.55); }
+.bentoItem:hover .bentoImage { transform: scale(1.09); filter: saturate(1.05); }
+.bentoItem:hover::before { background: linear-gradient(180deg, rgba(5,10,20,.1) 0%, rgba(5,10,20,.55) 40%, rgba(5,10,20,.96) 100%); }
+.bentoItem:hover::after { box-shadow: inset 0 0 0 1px rgba(212,175,55,.5), inset 0 0 30px rgba(212,175,55,.12); }
+.bentoItem:hover .bentoReveal { grid-template-rows: 1fr; opacity: 1; }
+.bentoItem:hover .bentoCategory::before { width: 34px; }
+.bentoItem:hover .bentoArrow { background: var(--accent-gradient); color: #1a1a1a; transform: rotate(-45deg); }
+
+.span1 { grid-column: span 1; }
+.span2 { grid-column: span 2; }
+.span3 { grid-column: span 3; }
+
+@media (max-width: 900px) {
+  .bentoGrid { grid-template-columns: repeat(2, 1fr); }
+  .span2, .span3 { grid-column: span 2; }
+}
+@media (max-width: 600px) {
+  .bentoGrid { grid-template-columns: 1fr; }
+  .span1, .span2, .span3 { grid-column: span 1; }
+}
+
+.contactLinks {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.contactLink {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 2rem;
+  border-radius: 99px;
+  background: var(--accent-gradient);
+  border: none;
+  color: #1a1a1a;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.contactLink:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+  color: #1a1a1a;
+}
+
+/* Skills */
+.skillGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem 3rem;
+  margin-top: 1rem;
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.skillHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.skillBar {
+  width: 100%;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skillProgress {
+  height: 100%;
+  background: var(--accent-gradient);
+  border-radius: 4px;
+  width: 0; /* Default for animation */
+  animation: fillProgress 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes fillProgress {
+  from { width: 0; }
+  to { width: var(--progress-width); }
+}
+
+/* Split-Screen Contact */
+.contactSplit {
+  display: flex;
+  flex-direction: column;
+  background: var(--glass-bg);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .contactSplit {
+    flex-direction: row;
+  }
+}
+
+.contactSplitLeft {
+  flex: 1;
+  padding: 3rem;
+  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contactSplitRight {
+  flex: 1.2;
+  padding: 3rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-left: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactSplitHeadline {
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-family: var(--font-serif);
+  color: #D4AF37;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.contactSplitHeadline::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: 2px;
+}
+
+.contactSplitDesc {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.contactSocials {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contactSocialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contactSocialLink:hover {
+  background: var(--accent-gradient);
+  color: #1a1a1a;
+  border-color: var(--accent-color);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+/* Custom Contact Form */
+.contactForm {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.inputField {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.inputField:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.inputField::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.5;
+}
+
+.submitButton {
+  background: var(--accent-gradient);
+  color: #1a1a1a;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+}
+
+.successMessage {
+  background: rgba(46, 204, 113, 0.1);
+  border: 1px solid rgba(46, 204, 113, 0.3);
+  color: #2ecc71;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .contactSplitRight {
+    border-left: none;
+    border-top: 1px solid var(--glass-border);
+    padding: 2rem 1.5rem;
+  }
+  .contactSplitLeft {
+    padding: 2rem 1.5rem;
+  }
+}
+
+
+
+.successState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  height: 100%;
+  min-height: 400px;
+  animation: fadeIn 0.4s ease;
+}
+
+.successIcon {
+  font-size: 4rem;
+  color: #2ecc71;
+  margin-bottom: 1.5rem;
+  background: rgba(46, 204, 113, 0.1);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.successTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.successText {
+  color: #aaa;
+  line-height: 1.6;
+  max-width: 400px;
+}

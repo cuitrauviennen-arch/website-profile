@@ -1,0 +1,58 @@
+{
+  "kind": "singleType",
+  "collectionName": "profiles",
+  "info": {
+    "singularName": "profile",
+    "pluralName": "profiles",
+    "displayName": "Profile",
+    "description": "Main profile information"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "bio": {
+      "type": "blocks"
+    },
+    "email": {
+      "type": "email"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "blogUrl": {
+      "type": "string"
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "contactTitle": {
+      "type": "string"
+    },
+    "contactDescription": {
+      "type": "text"
+    },
+    "navigation": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.nav-item"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_project_metrics",
+  "info": {
+    "displayName": "Metric",
+    "icon": "chartCircle"
+  },
+  "options": {},
+  "attributes": {
+    "prefix": {
+      "type": "string"
+    },
+    "count": {
+      "type": "decimal"
+    },
+    "suffix": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "ring": {
+      "type": "integer",
+      "min": 0,
+      "max": 100
+    }
+  }
+}

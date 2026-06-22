@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_project_creative_assets",
+  "info": {
+    "displayName": "Creative Asset",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "category": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "normal",
+        "tall"
+      ],
+      "default": "normal"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

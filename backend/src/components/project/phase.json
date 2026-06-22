@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_project_phases",
+  "info": {
+    "displayName": "Phase",
+    "icon": "layer"
+  },
+  "options": {},
+  "attributes": {
+    "step": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

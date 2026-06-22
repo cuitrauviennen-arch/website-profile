@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Toan Le Diep Trong | Full Stack Digital Marketer</title>
+<!-- Tailwind CSS v3 CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Serif for headings, Sans-serif for body -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'deep-navy': '#050a14',
+            'gold-primary': '#d4af37',
+            'gold-light': '#f9df91',
+            'gold-dark': '#b8860b',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-gradients">
+    /* Global background gradient */
+    body {
+      background: radial-gradient(circle at top, #0c162d 0%, #050a14 100%);
+      color: #e2e8f0;
+    }
+
+    /* Gold gradient for buttons and cards */
+    .gold-gradient {
+      background: linear-gradient(135deg, #f9df91 0%, #d4af37 50%, #b8860b 100%);
+      color: #1a1a1a;
+    }
+
+    /* Subtle glow for sections */
+    .glow-soft {
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+    }
+
+    /* Timeline line */
+    .timeline-line {
+      width: 2px;
+      background: linear-gradient(to bottom, transparent, #d4af37, #d4af37, transparent);
+    }
+
+    /* Custom progress bar transition */
+    .progress-fill {
+      transition: width 1s ease-in-out;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased min-h-screen">
+<!-- BEGIN: MainHeader -->
+<header class="pt-20 pb-12 text-center px-4" data-purpose="hero-section">
+<div class="max-w-4xl mx-auto">
+<h1 class="text-4xl md:text-5xl font-serif text-gold-light mb-2 tracking-wide uppercase">Toan Le Diep Trong</h1>
+<p class="text-lg text-gray-400 font-light mb-10 tracking-widest uppercase">Full Stack Digital Marketer</p>
+<!-- Profile Picture Container -->
+<div class="relative inline-block mb-12">
+<div class="w-32 h-32 md:w-40 md:h-40 rounded-full border-2 border-gold-primary p-1 overflow-hidden">
+<img alt="Toan Le Diep Trong" class="w-full h-full object-cover rounded-full" id="profile-pic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXp2RbzqUjdrtRZLDnq55RnlY4j9F9k9I415sEIkkce_esR4QKKT_f9yURfLPzZUR5jBABEXaI2IfalZDSGHslSUgLMHgdKu2__ty_YZc6s0I2uPMjPU_r0DEAj9Gh2KzIHG4d4vJ4tyEg9sG2B5M_6Bpiu9lkdbwAbmHsU57eoT8XkQNHP24YwJl0hq6ugs0lFYm_O0ccwhw_4D0A49L4HEqxI4swZQ3ihZ281LvCM0Sb-K-Bs2xWKL-9FNPFFxRvmoyeiT3YggVf"/>
+</div>
+</div>
+<!-- Bio Content -->
+<div class="max-w-3xl mx-auto text-gray-300 leading-relaxed space-y-6 text-sm md:text-base">
+<p>
+          With nearly a decade of experience in digital marketing, I specialize in performance marketing and end-to-end campaign strategy. As a Senior Digital Performance Manager at RED 2 Square, I led high-growth digital transformation across B2B and B2C categories, delivering strong results in brand awareness, lead generation, and revenue growth.
+        </p>
+<p>
+          I am proficient across platforms like Google, Facebook, LinkedIn, TikTok, and HubSpot, improving conversion rates and marketing efficiency. My experience spans multiple industries—from real estate and e-commerce to Fintech and SaaS—working with diverse brands to deliver impactful results.
+        </p>
+</div>
+<!-- CTA Buttons -->
+<div class="flex flex-wrap justify-center gap-4 mt-10">
+<a class="gold-gradient px-8 py-2 rounded-full font-semibold text-sm hover:opacity-90 transition-opacity" href="mailto:#">Email Me</a>
+<a class="gold-gradient px-8 py-2 rounded-full font-semibold text-sm hover:opacity-90 transition-opacity" href="#">LinkedIn</a>
+<a class="gold-gradient px-8 py-2 rounded-full font-semibold text-sm hover:opacity-90 transition-opacity" href="#">My Blog</a>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: WorkingHistory -->
+<section class="px-4 max-w-4xl mx-auto py-20" data-purpose="work-history" id="experience">
+<h2 class="text-2xl font-serif text-gold-light mb-12 border-b border-gold-dark/30 pb-2 inline-block">Working History</h2>
+<div class="relative pl-8">
+<!-- Vertical Timeline Line -->
+<div class="absolute left-0 top-0 bottom-0 timeline-line ml-[11px]"></div>
+<!-- Timeline Item 1 -->
+<div class="relative mb-12">
+<!-- Dot -->
+<div class="absolute -left-[27px] top-4 w-6 h-6 rounded-full gold-gradient border-4 border-deep-navy"></div>
+<!-- Card -->
+<div class="bg-white rounded-xl p-6 md:p-8 text-gray-800 shadow-xl" data-purpose="job-card">
+<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+<div>
+<h3 class="text-xl font-bold text-gray-900">RED 2 Square</h3>
+<p class="text-gold-dark font-semibold">Senior Performance Marketing Manager</p>
+</div>
+<span class="text-gray-500 text-sm mt-1 md:mt-0">Present</span>
+</div>
+<p class="text-sm text-gray-600 mb-4 leading-relaxed">
+            Welcome back to RED 2 Square for the manager responsible for overseeing client service performance across industries in the following key responsibilities:
+          </p>
+<ul class="space-y-3">
+<li class="flex items-start gap-3 text-sm">
+<span class="text-green-600 mt-1">
+<svg class="h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path></svg>
+</span>
+<span>Driving a positive return to deliver brand revenue across channels.</span>
+</li>
+<li class="flex items-start gap-3 text-sm">
+<span class="text-green-600 mt-1">
+<svg class="h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path></svg>
+</span>
+<span>Providing superior technical consulting in digital marketing to maintain our client base.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative">
+<!-- Dot -->
+<div class="absolute -left-[27px] top-4 w-6 h-6 rounded-full gold-gradient border-4 border-deep-navy"></div>
+<!-- Card -->
+<div class="bg-white rounded-xl p-6 md:p-8 text-gray-800 shadow-xl" data-purpose="job-card">
+<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+<div>
+<h3 class="text-xl font-bold text-gray-900">YOOSE - Location Based Marketing Agency</h3>
+<p class="text-gold-dark font-semibold">Senior Performance Marketing Manager</p>
+</div>
+<span class="text-gray-500 text-sm mt-1 md:mt-0">2018 - 2022</span>
+</div>
+<ul class="space-y-3">
+<li class="flex items-start gap-3 text-sm">
+<span class="text-green-600 mt-1">
+<svg class="h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path></svg>
+</span>
+<span>Responsible for all digital performance for clients and agencies.</span>
+</li>
+<li class="flex items-start gap-3 text-sm">
+<span class="text-green-600 mt-1">
+<svg class="h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path></svg>
+</span>
+<span>Consult clients on strategy, media, and digital platforms.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- END: WorkingHistory -->
+<!-- BEGIN: Skillset -->
+<section class="px-4 max-w-4xl mx-auto py-20" data-purpose="skills-section" id="skills">
+<h2 class="text-2xl font-serif text-gold-light mb-12 border-b border-gold-dark/30 pb-2 inline-block">My Skillset</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+<!-- Skill 1 -->
+<div class="space-y-2">
+<div class="flex justify-between text-sm font-medium">
+<span>Social Marketing</span>
+<span>85%</span>
+</div>
+<div class="h-1.5 w-full bg-gray-800 rounded-full overflow-hidden">
+<div class="h-full gold-gradient progress-fill" style="width: 85%"></div>
+</div>
+</div>
+<!-- Skill 2 -->
+<div class="space-y-2">
+<div class="flex justify-between text-sm font-medium">
+<span>Active Campaign</span>
+<span>80%</span>
+</div>
+<div class="h-1.5 w-full bg-gray-800 rounded-full overflow-hidden">
+<div class="h-full gold-gradient progress-fill" style="width: 80%"></div>
+</div>
+</div>
+<!-- Skill 3 -->
+<div class="space-y-2">
+<div class="flex justify-between text-sm font-medium">
+<span>Performance Marketing</span>
+<span>90%</span>
+</div>
+<div class="h-1.5 w-full bg-gray-800 rounded-full overflow-hidden">
+<div class="h-full gold-gradient progress-fill" style="width: 90%"></div>
+</div>
+</div>
+<!-- Skill 4 -->
+<div class="space-y-2">
+<div class="flex justify-between text-sm font-medium">
+<span>SEO</span>
+<span>75%</span>
+</div>
+<div class="h-1.5 w-full bg-gray-800 rounded-full overflow-hidden">
+<div class="h-full gold-gradient progress-fill" style="width: 75%"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Skillset -->
+<!-- BEGIN: WorkedProjects -->
+<section class="px-4 max-w-4xl mx-auto py-20" data-purpose="projects-section" id="projects">
+<h2 class="text-2xl font-serif text-gold-light mb-12 border-b border-gold-dark/30 pb-2 inline-block">Worked Projects</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Main Featured Project Card (Spans 2 cols) -->
+<div class="md:col-span-2 relative group overflow-hidden rounded-2xl glow-soft h-64 md:h-auto border border-white/10" data-purpose="featured-project">
+<img alt="Project Image" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyJLTBEHyvit9y-NNWmgxrQGsOoaxY240ROCa_VR6MamjVfOXd0Mi5KqoOPOjyXZIdYhpZejHsNJy-359QyLQOjpPhz7G_n6fxSODTlz7Sp9JSGDr7b7oC3A5vhVcnkPo--BTcP6cUGwBRbaWxAH-kW1bw40JsjbSAkBnpQu7k8vQQ4CHrJ-E-6giCzZAthJvQ3XybAfeRD8oHEYIKQ0jtdP9R8zjSJu59mtC49ohZQuEGlAEhsx-Akzg8-nD3YYHQr_4oVKf-M7O6"/>
+<div class="absolute inset-0 bg-black/60 flex flex-col justify-center items-center p-6 text-center">
+<h3 class="text-xl font-bold mb-4">Global E-commerce Campaign</h3>
+<button class="gold-gradient px-6 py-2 rounded-full font-bold flex items-center gap-2 hover:scale-105 transition-transform">
+            View Case Study 
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="bg-gray-900/50 border border-white/10 rounded-2xl overflow-hidden hover:border-gold-primary/30 transition-colors" data-purpose="project-card">
+<img alt="B2B Lead Generation" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASOUQJTvod--kCUydkbwhswf1d5Ir5FIJ8zLjAaBVPhIqiuAKxXJFzpJg3tmwXZ2aq8U7LcGnJq9-4achMmnKEw5uJXhGSw959KlqxaT8CNLgkyOheSVv0Zuj2rvQrhGyt3PE743nyrmlAC9xaOxi3uxC59vneTiHhd5OaufhLMTjtCgMN7buGFRXCrmxi8g7WJFLxXEffB90OyDyzcSr8jprU5XUbfTSzsv-Y1ndXIUcaCCzwY7slX1IGW4MopevxqnxZPAnkIvQl"/>
+<div class="p-4">
+<span class="text-[10px] text-gold-dark uppercase tracking-widest font-bold">SEO &amp; SEM</span>
+<h4 class="text-sm font-bold mt-1">B2B Lead Generation</h4>
+<p class="text-xs text-gray-400 mt-2 line-clamp-2">Optimized conversions and generated high quality B2B leads across industries.</p>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="bg-gray-900/50 border border-white/10 rounded-2xl overflow-hidden hover:border-gold-primary/30 transition-colors" data-purpose="project-card">
+<img alt="SaaS Revamp" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsdcqQIVUHbE4X8YHv7stZ8BBVBp9zrtvZEtbesSYRAQNnmLDkNJTZTgzh6qOoI-r8gUcog5GbP22cXdIqoCEBdq7azrTIfYXKGHiKFNOsaw4yXqKTr0-edNIPgtj684-LdsVgRk5K5MqDMO1hkrgBBBCRbNvxawjuczPWSbKCdClAnGjOVbRsYCJlFhq_ctHZat8maGkWE97hbDtCsmHJRppn2XZPVe9NA9PnXytBzIMNVvrKs2mS7eUjNRpziMdCv1YXHVgoaEk-"/>
+<div class="p-4">
+<span class="text-[10px] text-gold-dark uppercase tracking-widest font-bold">Strategy &amp; Creative</span>
+<h4 class="text-sm font-bold mt-1">SaaS Brand Revamp</h4>
+<p class="text-xs text-gray-400 mt-2 line-clamp-2">Accelerating digital strategy for SaaS market expansion.</p>
+</div>
+</div>
+<!-- Project Card 4 (Spans 2 cols for visual balance) -->
+<div class="md:col-span-2 bg-gray-900/50 border border-white/10 rounded-2xl overflow-hidden flex flex-col md:flex-row hover:border-gold-primary/30 transition-colors" data-purpose="project-card">
+<img alt="Brand Awareness" class="w-full md:w-1/2 h-48 md:h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxsNnCBbp4co7cPCnp7OZZq4aqu96hbwLYEj3FSxYV-GxW6u5radde_ExovfZsEl5qK3Po4Bheyl5NiO-8eE90NV2VSWrxCg9IENOQr6tnL6iOHVUUJPRv_vtRAiEeu-wR8mfUf2n_nstUpvShXasQlJzcvE6pz8F8t26aDh0fg7iVIVxGy3ZtaSo8nC-Xbz6Zh7hbIWhAgFVwmE1wYB2dLtggM4nY6e8qalaMB8ArW99s5lWDNQAMj1WHyilgtZX54Xv60nQHoNUa"/>
+<div class="p-6 flex flex-col justify-center">
+<span class="text-[10px] text-gold-dark uppercase tracking-widest font-bold">Omnichannel</span>
+<h4 class="text-lg font-bold mt-1">Omnichannel Brand Awareness</h4>
+<p class="text-sm text-gray-400 mt-2">Comprehensive cross-channel campaign reaching millions of potential customers globally.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: WorkedProjects -->
+<!-- BEGIN: FooterConnect -->
+<footer class="py-20 px-4" data-purpose="contact-section">
+<div class="max-w-4xl mx-auto">
+<div class="gold-gradient rounded-3xl p-10 md:p-16 relative overflow-hidden shadow-2xl">
+<!-- Subtle decorative circle background -->
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+<div class="relative z-10 max-w-lg">
+<h2 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6">Let's Connect</h2>
+<p class="text-gray-800 text-lg mb-8 leading-relaxed">
+            I'm always open to exploring new challenges and collaborations. Whether you have a project in mind or just want to chat, feel free to drop me a message!
+          </p>
+<div class="flex gap-4">
+<!-- Social Icons (Placeholder Circles) -->
+<a class="w-10 h-10 rounded-full border border-gray-900 flex items-center justify-center hover:bg-gray-900 hover:text-white transition-colors" href="#" title="Email">
+<span class="font-bold text-xs">E</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-gray-900 flex items-center justify-center hover:bg-gray-900 hover:text-white transition-colors" href="#" title="LinkedIn">
+<span class="font-bold text-xs">in</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-gray-900 flex items-center justify-center hover:bg-gray-900 hover:text-white transition-colors" href="#" title="Blog">
+<span class="font-bold text-xs">B</span>
+</a>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center text-gray-500 text-xs tracking-widest uppercase">
+        © 2023 Toan Le Diep Trong. All Rights Reserved.
+      </div>
+</div>
+</footer>
+<!-- END: FooterConnect -->
+</body></html>
