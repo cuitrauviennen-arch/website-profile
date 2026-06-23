@@ -104,9 +104,11 @@ const fallbackNavigation = [
   { label: "Contact", sectionId: "contact" }
 ];
 
+const apiUrl = process.env.NEXT_PUBLIC_STRAPI_URL || "http://127.0.0.1:1337";
+
 async function getProfileData() {
   try {
-    const res = await fetch("http://127.0.0.1:1337/api/profile?populate=*", { next: { revalidate: 10 } });
+    const res = await fetch(`${apiUrl}/api/profile?populate=*`, { next: { revalidate: 10 } });
     if (!res.ok) return null;
     const json = await res.json();
     return json.data;
@@ -117,7 +119,7 @@ async function getProfileData() {
 
 async function getExperienceData() {
   try {
-    const res = await fetch("http://127.0.0.1:1337/api/experiences?populate=*&sort=order:asc", { next: { revalidate: 10 } });
+    const res = await fetch(`${apiUrl}/api/experiences?populate=*&sort=order:asc`, { next: { revalidate: 10 } });
     if (!res.ok) return null;
     const json = await res.json();
     return json.data;
@@ -128,7 +130,7 @@ async function getExperienceData() {
 
 async function getSkillsData() {
   try {
-    const res = await fetch("http://127.0.0.1:1337/api/skills?sort=order:asc", { next: { revalidate: 10 } });
+    const res = await fetch(`${apiUrl}/api/skills?sort=order:asc`, { next: { revalidate: 10 } });
     if (!res.ok) return null;
     const json = await res.json();
     return json.data;
@@ -139,7 +141,7 @@ async function getSkillsData() {
 
 async function getProjectsData() {
   try {
-    const res = await fetch("http://127.0.0.1:1337/api/projects?populate=image&sort=order:asc", { next: { revalidate: 10 } });
+    const res = await fetch(`${apiUrl}/api/projects?populate=image&sort=order:asc`, { next: { revalidate: 10 } });
     if (!res.ok) return null;
     const json = await res.json();
     return json.data;
@@ -150,7 +152,7 @@ async function getProjectsData() {
 
 async function getAwardsData() {
   try {
-    const res = await fetch("http://127.0.0.1:1337/api/awards?populate=image&sort=order:asc", { next: { revalidate: 10 } });
+    const res = await fetch(`${apiUrl}/api/awards?populate=image&sort=order:asc`, { next: { revalidate: 10 } });
     if (!res.ok) return null;
     const json = await res.json();
     return json.data;
@@ -175,7 +177,9 @@ export default async function Home() {
   // Resolve avatar URL
   let avatarUrl = "/profile-placeholder.jpg";
   if (profileData.avatar?.url) {
-    avatarUrl = `http://127.0.0.1:1337${profileData.avatar.url}`;
+    avatarUrl = profileData.avatar.url.startsWith('http') 
+      ? profileData.avatar.url 
+      : `${apiUrl}${profileData.avatar.url}`;
   }
 
   const navItems = profileData.navigation && profileData.navigation.length > 0 ? profileData.navigation : fallbackNavigation;
@@ -232,7 +236,10 @@ export default async function Home() {
         <h2 className={styles.sectionTitle}>Working History</h2>
         <div className={styles.timeline}>
           {workingHistory.map((job: any, index: number) => {
-            const logoUrl = job.logo?.url ? `http://127.0.0.1:1337${job.logo.url}` : null;
+            let logoUrl = null;
+            if (job.logo?.url) {
+              logoUrl = job.logo.url.startsWith('http') ? job.logo.url : `${apiUrl}${job.logo.url}`;
+            }
             
             return (
               <div key={index} className={styles.timelineItem}>
@@ -300,7 +307,7 @@ export default async function Home() {
             if (typeof project.image === 'string') {
               imageUrl = project.image;
             } else if (project.image?.url) {
-              imageUrl = `http://127.0.0.1:1337${project.image.url}`;
+              imageUrl = project.image.url.startsWith('http') ? project.image.url : `${apiUrl}${project.image.url}`;
             }
 
             return (

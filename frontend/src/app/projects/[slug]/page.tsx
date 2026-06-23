@@ -1,7 +1,7 @@
 import "./projectDetail.css";
 import ProjectDetailEffects from "./ProjectDetailEffects";
 
-const STRAPI = "http://127.0.0.1:1337";
+const STRAPI = process.env.NEXT_PUBLIC_STRAPI_URL || "http://127.0.0.1:1337";
 
 // ---------- Fallback (placeholder) ----------
 const fallbackProject = {
@@ -57,7 +57,7 @@ async function getProfileData() {
 }
 
 const mediaUrl = (m: any) =>
-  typeof m === "string" ? m : m?.url ? `${STRAPI}${m.url}` : null;
+  typeof m === "string" ? m : m?.url ? (m.url.startsWith('http') ? m.url : `${STRAPI}${m.url}`) : null;
 
 // ---------- Fetch một project theo slug ----------
 async function getProject(slug: string) {
@@ -90,7 +90,7 @@ export default async function ProjectDetailPage({
 
   let avatarUrl = fallbackProfile.avatar;
   if (profileData?.avatar?.url) {
-    avatarUrl = `${STRAPI}${profileData.avatar.url}`;
+    avatarUrl = profileData.avatar.url.startsWith('http') ? profileData.avatar.url : `${STRAPI}${profileData.avatar.url}`;
   }
   
   const profile = {
