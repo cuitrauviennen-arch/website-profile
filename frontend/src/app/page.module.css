@@ -155,7 +155,7 @@
 
 .timelineLogo {
   position: absolute;
-  left: 20px;
+  left: 11.5px; /* Centered perfectly over the line at 40px */
   top: 0;
   width: 55px;
   height: 55px;
@@ -236,7 +236,7 @@
     padding-left: 60px;
   }
   .timelineLogo {
-    left: 0;
+    left: -3.5px; /* Centered perfectly over the line at 20px */
     width: 45px;
     height: 45px;
   }
