@@ -182,7 +182,8 @@ export default async function Home() {
       : `${apiUrl}${profileData.avatar.url}`;
   }
 
-  const navItems = profileData.navigation && profileData.navigation.length > 0 ? profileData.navigation : fallbackNavigation;
+  const navItems = (profileData.navigation && profileData.navigation.length > 0 ? profileData.navigation : fallbackNavigation)
+    .filter((item: any) => item.sectionId !== "awards");
 
   return (
     <div className="animate-fade-in">
@@ -291,11 +292,13 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Team Awards */}
+      {/* Team Awards - Tạm ẩn theo yêu cầu */}
+      {/*
       <section className={styles.section} id="awards">
         <h2 className={styles.sectionTitle}>Team Awards</h2>
         <AwardsCarousel awardsData={awardsData} />
       </section>
+      */}
 
       {/* Worked Projects - Bento Grid */}
       <section className={styles.section} id="projects">
