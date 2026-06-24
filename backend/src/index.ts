@@ -17,32 +17,33 @@ export default {
    * run jobs, or perform some special logic.
    */
   async bootstrap({ strapi }) {
-    const pluginStore = strapi.store({
-      environment: '',
-      type: 'plugin',
-      name: 'content-manager',
-    });
+    const ctService = strapi.plugin('content-manager').service('content-types');
+    const compService = strapi.plugin('content-manager').service('components');
 
-    const updateMeta = async (key, updates) => {
-      let config = await pluginStore.get({ key });
-      if (config && config.metadatas) {
-        let changed = false;
-        for (const [field, desc] of Object.entries(updates)) {
-          if (config.metadatas[field] && config.metadatas[field].edit) {
-            if (config.metadatas[field].edit.description !== desc) {
-              config.metadatas[field].edit.description = desc;
-              changed = true;
+    const updateMeta = async (service, uid, updates) => {
+      try {
+        const config = await service.findConfiguration({ uid });
+        if (config && config.metadatas) {
+          let changed = false;
+          for (const [field, desc] of Object.entries(updates)) {
+            if (config.metadatas[field] && config.metadatas[field].edit) {
+              if (config.metadatas[field].edit.description !== desc) {
+                config.metadatas[field].edit.description = desc;
+                changed = true;
+              }
             }
           }
+          if (changed) {
+            await service.updateConfiguration({ uid }, config);
+          }
         }
-        if (changed) {
-          await pluginStore.set({ key, value: config });
-        }
+      } catch (err) {
+        console.error('Error updating config for', uid, err);
       }
     };
 
     // Update Project
-    await updateMeta('configuration_content_types::api::project.project', {
+    await updateMeta(ctService, 'api::project.project', {
       title: 'Hero Section - Tên chính của dự án. (VD: Global E-commerce Campaign)',
       slug: 'Đường dẫn URL của dự án.',
       eyebrow: 'Hero Section - Tiêu đề phụ nằm trên cùng (VD: Performance Marketing · 2024).',
@@ -56,13 +57,13 @@ export default {
     });
 
     // Update Components
-    await updateMeta('configuration_components::project.overview-item', {
+    await updateMeta(compService, 'project.overview-item', {
       k: 'Số thứ tự hoặc nhãn nhỏ nằm trên tiêu đề thẻ (VD: 01, Bước 1).',
       title: 'Tiêu đề của thẻ (VD: Challenge, Solution, Results).',
       body: 'Mô tả chi tiết, khuyến nghị 3-4 dòng.'
     });
 
-    await updateMeta('configuration_components::project.metric', {
+    await updateMeta(compService, 'project.metric', {
       prefix: 'Ký tự đặt trước con số (VD: +, $).',
       count: 'Giá trị số để chạy hiệu ứng đếm (VD: 200, 10). Chỉ nhập số.',
       suffix: 'Ký tự theo sau con số (VD: %, k+, M+).',
@@ -70,14 +71,14 @@ export default {
       ring: 'Mức độ lấp đầy vòng tròn (từ 1 đến 100).'
     });
 
-    await updateMeta('configuration_components::project.phase', {
+    await updateMeta(compService, 'project.phase', {
       step: 'Nhãn hiển thị tiến trình (VD: Phase 01).',
       title: 'Tiêu đề Giai đoạn.',
       body: 'Nội dung chi tiết. Có thể dùng Bold để nhấn mạnh.',
       image: 'Ảnh minh họa. Tỉ lệ 4:3 hoặc 16:9 (VD: 800x600px).'
     });
 
-    await updateMeta('configuration_components::project.creative-asset', {
+    await updateMeta(compService, 'project.creative-asset', {
       category: 'Phân loại tài nguyên (VD: Social, Web, Video).',
       name: 'Tiêu đề ảnh.',
       description: 'Đoạn chữ hiện ra khi di chuột vào (Hover).',
