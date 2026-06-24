@@ -7,13 +7,16 @@
   "options": {},
   "attributes": {
     "k": {
-      "type": "string"
+      "type": "string",
+      "description": "Số thứ tự hoặc nhãn nhỏ nằm trên tiêu đề thẻ (VD: 01, Bước 1)."
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "description": "Tiêu đề của thẻ (VD: Challenge, Solution, Results)."
     },
     "body": {
-      "type": "text"
+      "type": "text",
+      "description": "Mô tả chi tiết, khuyến nghị 3-4 dòng."
     }
   }
 }

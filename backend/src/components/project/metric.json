@@ -7,21 +7,26 @@
   "options": {},
   "attributes": {
     "prefix": {
-      "type": "string"
+      "type": "string",
+      "description": "Ký tự đặt trước con số (VD: +, $)."
     },
     "count": {
-      "type": "decimal"
+      "type": "decimal",
+      "description": "Giá trị số để chạy hiệu ứng đếm (VD: 200, 10). Chỉ nhập số."
     },
     "suffix": {
-      "type": "string"
+      "type": "string",
+      "description": "Ký tự theo sau con số (VD: %, k+, M+)."
     },
     "label": {
-      "type": "string"
+      "type": "string",
+      "description": "Tên của chỉ số nằm dưới vòng tròn (VD: ROI, Leads)."
     },
     "ring": {
       "type": "integer",
       "min": 0,
-      "max": 100
+      "max": 100,
+      "description": "Mức độ lấp đầy vòng tròn (từ 1 đến 100)."
     }
   }
 }

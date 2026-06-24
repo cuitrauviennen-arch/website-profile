@@ -7,13 +7,16 @@
   "options": {},
   "attributes": {
     "category": {
-      "type": "string"
+      "type": "string",
+      "description": "Phân loại tài nguyên (VD: Social, Web, Video)."
     },
     "name": {
-      "type": "string"
+      "type": "string",
+      "description": "Tiêu đề ảnh."
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "description": "Đoạn chữ hiện ra khi di chuột vào (Hover)."
     },
     "size": {
       "type": "enumeration",
@@ -21,7 +24,8 @@
         "normal",
         "tall"
       ],
-      "default": "normal"
+      "default": "normal",
+      "description": "Chọn \"tall\" (để up ảnh dọc 3:4/9:16) hoặc \"normal\" (ảnh vuông 1:1)."
     },
     "image": {
       "type": "media",
@@ -29,7 +33,8 @@
       "required": false,
       "allowedTypes": [
         "images"
-      ]
+      ],
+      "description": "Hình ảnh ứng với Size. (Dọc: ~900x1200px, Vuông: ~800x800px)."
     }
   }
 }

@@ -7,13 +7,16 @@
   "options": {},
   "attributes": {
     "step": {
-      "type": "string"
+      "type": "string",
+      "description": "Nhãn hiển thị tiến trình (VD: Phase 01)."
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "description": "Tiêu đề Giai đoạn."
     },
     "body": {
-      "type": "richtext"
+      "type": "richtext",
+      "description": "Nội dung chi tiết. Có thể dùng Bold để nhấn mạnh."
     },
     "image": {
       "type": "media",
@@ -21,7 +24,8 @@
       "required": false,
       "allowedTypes": [
         "images"
-      ]
+      ],
+      "description": "Ảnh minh họa. Tỉ lệ 4:3 hoặc 16:9 (VD: 800x600px)."
     }
   }
 }
