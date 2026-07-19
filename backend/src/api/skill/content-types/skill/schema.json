@@ -8,7 +8,7 @@
     "description": "My Skillset"
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {

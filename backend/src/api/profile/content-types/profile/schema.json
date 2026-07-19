@@ -8,7 +8,7 @@
     "description": "Main profile information"
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
