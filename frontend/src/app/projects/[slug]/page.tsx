@@ -1,5 +1,6 @@
 import "./projectDetail.css";
 import ProjectDetailEffects from "./ProjectDetailEffects";
+import ReactMarkdown from "react-markdown";
 
 const STRAPI = process.env.NEXT_PUBLIC_STRAPI_URL || "http://127.0.0.1:1337";
 
@@ -21,9 +22,9 @@ const fallbackProject = {
     { prefix: "", count: 2, suffix: ".5M", label: "Reach", ring: 60 },
   ],
   phases: [
-    { step: "Phase 01", title: "Audit & Re-architect", body: "A full audit mapped every touchpoint from first impression to repeat purchase, then we rebuilt the <strong>media buying strategy</strong> around incremental value.", image: null, imageLabel: "funnel audit dashboard" },
-    { step: "Phase 02", title: "Creative as a Growth Lever", body: "A structured testing cadence fed winning concepts into scaled campaigns, while <strong>marketing automation</strong> nurtured leads with behaviour-based messaging.", image: null, imageLabel: "creative testing matrix" },
-    { step: "Phase 03", title: "Compounding Engine", body: "The result was a repeatable, <strong>data-driven engine</strong> that compounded performance month over month.", image: null, imageLabel: "growth report" },
+    { step: "Phase 01", title: "Audit & Re-architect", body: "A full audit mapped every touchpoint from first impression to repeat purchase, then we rebuilt the **media buying strategy** around incremental value.", image: null, imageLabel: "funnel audit dashboard" },
+    { step: "Phase 02", title: "Creative as a Growth Lever", body: "A structured testing cadence fed winning concepts into scaled campaigns, while **marketing automation** nurtured leads with behaviour-based messaging.", image: null, imageLabel: "creative testing matrix" },
+    { step: "Phase 03", title: "Compounding Engine", body: "The result was a repeatable, **data-driven engine** that compounded performance month over month.", image: null, imageLabel: "growth report" },
   ],
   assets: [
     { category: "Social", name: "Launch Hero Ad", description: "Primary launch creative used across Meta & TikTok placements.", size: "tall", image: null, imageLabel: "social ad — hero creative" },
@@ -180,7 +181,7 @@ export default async function ProjectDetailPage({
             <div className="pd-st-txt">
               <div className="pd-step">{ph.step}</div>
               <h3>{ph.title}</h3>
-              <p dangerouslySetInnerHTML={{ __html: ph.body }} />
+              <ReactMarkdown>{ph.body}</ReactMarkdown>
             </div>
             <div className="pd-st-img">
               {mediaUrl(ph.image)
