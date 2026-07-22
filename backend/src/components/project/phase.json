@@ -19,7 +19,7 @@
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
         "output": "HTML",
-        "preset": "standard"
+        "preset": "defaultHtml"
       },
       "description": "Nội dung chi tiết. Có thể dùng Bold để nhấn mạnh."
     },

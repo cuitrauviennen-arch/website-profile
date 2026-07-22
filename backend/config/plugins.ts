@@ -16,10 +16,6 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin =>
       },
     },
   },
-  ckeditor5: {
-    enabled: true,
-    resolve: './node_modules/@_sh/strapi-plugin-ckeditor'
-  },
 });
 
 export default config;
