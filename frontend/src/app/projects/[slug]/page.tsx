@@ -181,7 +181,7 @@ export default async function ProjectDetailPage({
             <div className="pd-st-txt">
               <div className="pd-step">{ph.step}</div>
               <h3>{ph.title}</h3>
-              <ReactMarkdown>{ph.body}</ReactMarkdown>
+              <p dangerouslySetInnerHTML={{ __html: ph.body }} />
             </div>
             <div className="pd-st-img">
               {mediaUrl(ph.image)
