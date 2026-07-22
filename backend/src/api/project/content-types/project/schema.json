@@ -8,7 +8,7 @@
     "description": "Worked Projects Portfolio"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {

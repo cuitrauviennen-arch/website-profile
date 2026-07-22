@@ -449,7 +449,7 @@ export interface ApiAwardAward extends Struct.CollectionTypeSchema {
     singularName: 'award';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
@@ -512,7 +512,7 @@ export interface ApiExperienceExperience extends Struct.CollectionTypeSchema {
     singularName: 'experience';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     company: Schema.Attribute.String & Schema.Attribute.Required;
@@ -546,7 +546,7 @@ export interface ApiProfileProfile extends Struct.SingleTypeSchema {
     singularName: 'profile';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     avatar: Schema.Attribute.Media<'images'>;
@@ -632,7 +632,7 @@ export interface ApiSkillSkill extends Struct.CollectionTypeSchema {
     singularName: 'skill';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
