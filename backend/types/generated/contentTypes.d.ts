@@ -585,7 +585,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     singularName: 'project';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     assets: Schema.Attribute.Component<'project.creative-asset', true>;
