@@ -150,7 +150,7 @@ export default async function ProjectDetailPage({
             <div className="pd-ov-card pd-reveal" data-d={i} key={i}>
               <div className="pd-k">{o.k}</div>
               <h3>{o.title}</h3>
-              <p>{o.body}</p>
+              <div dangerouslySetInnerHTML={{ __html: o.body }} />
             </div>
           ))}
         </div>

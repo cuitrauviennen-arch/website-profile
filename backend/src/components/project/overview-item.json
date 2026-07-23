@@ -15,7 +15,12 @@
       "description": "Tiêu đề của thẻ (VD: Challenge, Solution, Results)."
     },
     "body": {
-      "type": "text",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "output": "HTML",
+        "preset": "defaultHtml"
+      },
       "description": "Mô tả chi tiết, khuyến nghị 3-4 dòng."
     }
   }
