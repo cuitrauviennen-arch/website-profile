@@ -1,6 +1,7 @@
 import "./projectDetail.css";
 import ProjectDetailEffects from "./ProjectDetailEffects";
 import ReactMarkdown from "react-markdown";
+import CreativeAssetsViewer from "./CreativeAssetsViewer";
 
 const STRAPI = process.env.NEXT_PUBLIC_STRAPI_URL || "http://127.0.0.1:1337";
 
@@ -195,20 +196,7 @@ export default async function ProjectDetailPage({
       {/* Creative Assets — bento reveal */}
       <section className="pd-sec">
         <h2 className="pd-title">Creative Assets</h2>
-        <div className="pd-ca">
-          {p.assets.map((a: any, i: number) => (
-            <a className={`pd-ca-item pd-reveal${a.size === "tall" ? " pd-tall" : ""}`} data-d={i % 3} href="#" key={i}>
-              {mediaUrl(a.image)
-                ? <img src={mediaUrl(a.image)!} alt={a.name} />
-                : <div className="pd-ph" data-label={a.imageLabel || a.name} />}
-              <div className="pd-ca-body">
-                <div className="pd-ca-cat">{a.category}</div>
-                <div className="pd-ca-name">{a.name}</div>
-                <div className="pd-ca-rev"><div><p>{a.description}</p></div></div>
-              </div>
-            </a>
-          ))}
-        </div>
+        <CreativeAssetsViewer assets={p.assets || []} />
       </section>
 
       {/* Footer nav */}
