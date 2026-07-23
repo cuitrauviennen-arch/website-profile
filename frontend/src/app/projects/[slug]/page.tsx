@@ -2,6 +2,7 @@ import "./projectDetail.css";
 import ProjectDetailEffects from "./ProjectDetailEffects";
 import ReactMarkdown from "react-markdown";
 import CreativeAssetsViewer from "./CreativeAssetsViewer";
+import BackToTop from "@/components/BackToTop";
 
 const STRAPI = process.env.NEXT_PUBLIC_STRAPI_URL || "http://127.0.0.1:1337";
 
@@ -213,6 +214,7 @@ export default async function ProjectDetailPage({
       </footer>
 
       <ProjectDetailEffects />
+      <BackToTop />
     </div>
   );
 }
