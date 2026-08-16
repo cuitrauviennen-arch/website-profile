@@ -6,6 +6,13 @@ import BackToTop from "@/components/BackToTop";
 
 const STRAPI = process.env.NEXT_PUBLIC_STRAPI_URL || "http://127.0.0.1:1337";
 
+const fallbackProjects = [
+  { title: "Global E-commerce Campaign", slug: "global-e-commerce-campaign" },
+  { title: "B2B Lead Generation", slug: "b2b-lead-generation" },
+  { title: "Brand Repositioning", slug: "brand-repositioning" },
+  { title: "App Launch Strategy", slug: "app-launch-strategy" },
+];
+
 // ---------- Fallback (placeholder) ----------
 const fallbackProject = {
   title: "Global E-commerce Campaign",
@@ -36,7 +43,7 @@ const fallbackProject = {
     { category: "Brand", name: "Results Deck", description: "Executive summary presented to stakeholders.", size: "tall", image: null, imageLabel: "case study deck" },
     { category: "Video", name: "UGC Edit", description: "Short-form creator content for paid social.", size: "normal", image: null, imageLabel: "ugc edit" },
   ],
-  nextProject: { title: "B2B Lead Generation", slug: "#" },
+  nextProject: { title: "B2B Lead Generation", slug: "b2b-lead-generation" },
 };
 
 const fallbackProfile = {
@@ -59,6 +66,17 @@ async function getProfileData() {
   }
 }
 
+async function getAllProjects() {
+  try {
+    const res = await fetch(`${STRAPI}/api/projects?sort=order:asc`, { next: { revalidate: 10 } });
+    if (!res.ok) return [];
+    const json = await res.json();
+    return json.data || [];
+  } catch {
+    return [];
+  }
+}
+
 const mediaUrl = (m: any) =>
   typeof m === "string" ? m : m?.url ? (m.url.startsWith('http') ? m.url : `${STRAPI}${m.url}`) : null;
 
@@ -66,7 +84,7 @@ const mediaUrl = (m: any) =>
 async function getProject(slug: string) {
   try {
     const populate =
-      "populate[image]=true&populate[phases][populate]=image&populate[assets][populate]=image&populate[metrics]=true&populate[overview]=true";
+      "populate[image]=true&populate[phases][populate]=image&populate[assets][populate]=image&populate[metrics]=true&populate[overview]=true&populate[nextProject]=true";
     const res = await fetch(
       `${STRAPI}/api/projects?filters[slug][$eq]=${slug}&${populate}`,
       { next: { revalidate: 10 } }
@@ -85,9 +103,10 @@ export default async function ProjectDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const [projectData, profileData] = await Promise.all([
+  const [projectData, profileData, allProjectsData] = await Promise.all([
     getProject(slug),
     getProfileData(),
+    getAllProjects(),
   ]);
   const data = projectData ?? fallbackProject;
 
@@ -105,6 +124,22 @@ export default async function ProjectDetailPage({
     blog: profileData?.blog || fallbackProfile.blog,
   };
 
+  // Tự động xác định next project nếu chưa có hoặc slug bị đính kèm '#'
+  let resolvedNextProject = data.nextProject;
+  if (!resolvedNextProject || !resolvedNextProject.slug || resolvedNextProject.slug === "#") {
+    const projectsList = allProjectsData.length > 0 ? allProjectsData : fallbackProjects;
+    const currentIndex = projectsList.findIndex((item: any) => item.slug === slug);
+    if (currentIndex !== -1 && projectsList.length > 1) {
+      const nextItem = projectsList[(currentIndex + 1) % projectsList.length];
+      resolvedNextProject = {
+        title: nextItem.title,
+        slug: nextItem.slug,
+      };
+    } else {
+      resolvedNextProject = fallbackProject.nextProject;
+    }
+  }
+
   // chuẩn hoá field (Strapi v5 trả phẳng); fallback đã đúng shape sẵn
   const p = {
     title: data.title ?? fallbackProject.title,
@@ -114,7 +149,7 @@ export default async function ProjectDetailPage({
     metrics: data.metrics?.length ? data.metrics : fallbackProject.metrics,
     phases: data.phases?.length ? data.phases : fallbackProject.phases,
     assets: data.assets?.length ? data.assets : fallbackProject.assets,
-    nextProject: data.nextProject ?? fallbackProject.nextProject,
+    nextProject: resolvedNextProject,
   };
 
   return (
