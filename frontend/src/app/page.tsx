@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+import Link from "next/link";
 import ContactSection from "../components/ContactSection";
 import ScrollNavigation from "../components/ScrollNavigation";
 
@@ -209,6 +210,9 @@ export default async function Home() {
         </div>
 
         <div className={styles.contactLinks}>
+          <Link href="/brief" className={styles.contactLink}>
+            Start a Marketing Brief&nbsp; <span aria-hidden="true">→</span>
+          </Link>
           {profileData.email && (
             <a href={`mailto:${profileData.email}`} className={styles.contactLink}>
               Email Me

@@ -1,0 +1,1229 @@
+{
+  "title": "Digital Marketing Client Brief Questionnaire",
+  "intro": [
+    "Thank you for taking the time to complete this brief. The information below will help us understand your business, objectives, target audience, priorities, and expectations so we can develop the most relevant digital marketing strategy and media plan.",
+    "Please provide as much information as possible. If a question is not applicable, you may leave it blank or mark it as N/A."
+  ],
+  "groups": [
+    [
+      {
+        "number": 1,
+        "title": "1. Company & Business Overview",
+        "questions": [
+          {
+            "id": 5,
+            "label": "Company / Brand Name:",
+            "type": "text",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 7,
+            "label": "Website:",
+            "type": "text",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 9,
+            "label": "Industry / Business Category:",
+            "type": "text",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 11,
+            "label": "Please briefly describe your company and business model.",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 13,
+            "label": "What are your main products or services?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 15,
+            "label": "Which product(s) or service(s) should this campaign focus on?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 17,
+            "label": "What are your key revenue streams?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 19,
+            "label": "Which markets or countries does your business currently operate in?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "title": "2. Campaign Background",
+        "questions": [
+          {
+            "id": 22,
+            "label": "What is the reason for launching this campaign?",
+            "type": "textarea",
+            "help": [
+              "Examples:",
+              "• New product / service launch",
+              "• Lead generation",
+              "• Sales growth",
+              "• Brand awareness",
+              "• Market expansion",
+              "• Event promotion",
+              "• Student recruitment",
+              "• Customer acquisition",
+              "• Retargeting existing prospects",
+              "• Other"
+            ]
+          },
+          {
+            "id": 34,
+            "label": "Please describe the business challenge or opportunity you would like us to address.",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 36,
+            "label": "Have you run similar campaigns before?",
+            "type": "radio",
+            "options": [
+              "Yes",
+              "No"
+            ],
+            "followups": [
+              {
+                "id": 39,
+                "label": "Platforms used:",
+                "type": "text",
+                "placeholder": "[Please enter]"
+              },
+              {
+                "id": 40,
+                "label": "Campaign period:",
+                "type": "text",
+                "placeholder": "[Please enter]"
+              },
+              {
+                "id": 41,
+                "label": "Budget:",
+                "type": "text",
+                "placeholder": "[Please enter]"
+              },
+              {
+                "id": 42,
+                "label": "Key results:",
+                "type": "text",
+                "placeholder": "[Please enter]"
+              },
+              {
+                "id": 43,
+                "label": "What worked well:",
+                "type": "text",
+                "placeholder": "[Please enter]"
+              },
+              {
+                "id": 44,
+                "label": "What did not work well:",
+                "type": "text",
+                "placeholder": "[Please enter]"
+              }
+            ],
+            "followupLabel": "If yes, please share:"
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title": "3. Business & Marketing Objectives",
+        "questions": [
+          {
+            "id": 46,
+            "label": "What is the primary business objective of this campaign?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 48,
+            "label": "What is the primary marketing objective?",
+            "type": "radio",
+            "options": [
+              "Brand Awareness",
+              "Reach",
+              "Website Traffic",
+              "Engagement / Interaction",
+              "Video Views",
+              "Lead Generation",
+              "Online Sales / Revenue",
+              "App Install / Usage",
+              "Store Visit",
+              "Event Registration",
+              "Other"
+            ]
+          },
+          {
+            "id": 55,
+            "label": "Are there any secondary objectives?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 57,
+            "label": "What would you consider a successful campaign?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          }
+        ]
+      },
+      {
+        "number": 4,
+        "title": "4. Kpi & Performance Expectations",
+        "questions": [
+          {
+            "id": 60,
+            "label": "Which KPIs are most important to your business?",
+            "type": "checkbox",
+            "options": [
+              "Reach",
+              "Impressions",
+              "CPM",
+              "Video Views",
+              "Engagement / Interaction",
+              "Website Sessions / Landing Page Views",
+              "CTR",
+              "CPC",
+              "Leads",
+              "Cost Per Lead",
+              "Qualified Leads",
+              "MQL / SQL",
+              "Conversion Rate",
+              "Sales",
+              "Revenue",
+              "Cost Per Acquisition",
+              "ROAS",
+              "Other"
+            ]
+          },
+          {
+            "id": 70,
+            "label": "Do you have specific KPI targets?",
+            "type": "table",
+            "rows": [
+              [
+                "KPI",
+                "Target"
+              ],
+              [
+                "Leads / Sales",
+                "[Please enter]"
+              ],
+              [
+                "CPL / CPA",
+                "[Please enter]"
+              ],
+              [
+                "Revenue",
+                "[Please enter]"
+              ],
+              [
+                "ROAS",
+                "[Please enter]"
+              ],
+              [
+                "Conversion Rate",
+                "[Please enter]"
+              ],
+              [
+                "Other",
+                "[Please enter]"
+              ]
+            ]
+          },
+          {
+            "id": 73,
+            "label": "Do you have historical performance benchmarks we should use for comparison?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "number": 5,
+        "title": "5. Target Audience",
+        "questions": [
+          {
+            "id": 76,
+            "label": "Who is your ideal customer?",
+            "type": "note"
+          },
+          {
+            "id": 77,
+            "label": "Please describe your primary target audience as specifically as possible.",
+            "type": "note"
+          },
+          {
+            "id": 78,
+            "label": "Age:",
+            "type": "text",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 80,
+            "label": "Gender:",
+            "type": "text",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 82,
+            "label": "Location / Market:",
+            "type": "text",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 84,
+            "label": "Occupation / Job Title:",
+            "type": "text",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 86,
+            "label": "Industry:",
+            "type": "text",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 88,
+            "label": "Income / Purchasing Power:",
+            "type": "text",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 90,
+            "label": "Education Level:",
+            "type": "text",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 92,
+            "label": "Interests:",
+            "type": "text",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 94,
+            "label": "Behaviours:",
+            "type": "text",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 96,
+            "label": "Needs / Pain Points:",
+            "type": "text",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 98,
+            "label": "What motivates them to purchase or enquire?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 100,
+            "label": "What are the main barriers preventing them from purchasing?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 102,
+            "label": "Are there different audience segments we should prioritise?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 104,
+            "label": "Are there any audiences we should exclude?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          }
+        ]
+      },
+      {
+        "number": 6,
+        "title": "6. Customer Journey",
+        "questions": [
+          {
+            "id": 107,
+            "label": "How do customers typically discover your brand?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 109,
+            "label": "What does the typical customer journey look like?",
+            "type": "textarea",
+            "placeholder": "[Please enter]",
+            "help": [
+              "Example:",
+              "Awareness → Website Visit → Enquiry → Sales Consultation → Purchase"
+            ]
+          },
+          {
+            "id": 113,
+            "label": "How long is your typical sales cycle?",
+            "type": "radio",
+            "options": [
+              "Same day",
+              "1–7 days",
+              "1–4 weeks",
+              "1–3 months",
+              "3–6 months",
+              "More than 6 months"
+            ]
+          },
+          {
+            "id": 117,
+            "label": "Who is involved in the purchase decision?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          }
+        ]
+      },
+      {
+        "number": 7,
+        "title": "7. Product / Service & Offer",
+        "questions": [
+          {
+            "id": 120,
+            "label": "Which product or service should receive the highest priority?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 122,
+            "label": "What is the average product price / transaction value?",
+            "type": "text",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 124,
+            "label": "What are the key benefits of your product or service?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 126,
+            "label": "What makes your offering different from competitors?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 128,
+            "label": "What are the strongest reasons customers should choose you?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 130,
+            "label": "Are there any current promotions, incentives or offers?",
+            "type": "textarea",
+            "placeholder": "[Please enter]",
+            "help": [
+              "Examples:",
+              "• Discount",
+              "• Free consultation",
+              "• Free trial",
+              "• Early-bird promotion",
+              "• Limited-time offer",
+              "• Free assessment",
+              "• Gift / voucher"
+            ]
+          }
+        ]
+      },
+      {
+        "number": 8,
+        "title": "8. Brand Positioning & Communication",
+        "questions": [
+          {
+            "id": 141,
+            "label": "How would you describe your brand positioning?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 143,
+            "label": "What are the key messages you want customers to remember?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 145,
+            "label": "What tone of voice should we use?",
+            "type": "checkbox",
+            "options": [
+              "Professional",
+              "Premium",
+              "Corporate",
+              "Friendly",
+              "Educational",
+              "Inspirational",
+              "Bold",
+              "Technical / Expert-led",
+              "Other"
+            ]
+          },
+          {
+            "id": 151,
+            "label": "Are there any specific messages, claims or wording we must include?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 153,
+            "label": "Are there any messages, topics or wording we should avoid?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 155,
+            "label": "Do you have existing brand guidelines?",
+            "type": "radio",
+            "options": [
+              "Yes",
+              "No"
+            ],
+            "followups": [
+              {
+                "id": 158,
+                "label": "Brand guideline",
+                "type": "text",
+                "placeholder": "Share a link or note"
+              },
+              {
+                "id": 159,
+                "label": "Logo files",
+                "type": "text",
+                "placeholder": "Share a link or note"
+              },
+              {
+                "id": 160,
+                "label": "Fonts",
+                "type": "text",
+                "placeholder": "Share a link or note"
+              },
+              {
+                "id": 161,
+                "label": "Colour palette",
+                "type": "text",
+                "placeholder": "Share a link or note"
+              },
+              {
+                "id": 162,
+                "label": "Creative guidelines",
+                "type": "text",
+                "placeholder": "Share a link or note"
+              },
+              {
+                "id": 163,
+                "label": "Tone of voice guidelines",
+                "type": "text",
+                "placeholder": "Share a link or note"
+              }
+            ],
+            "followupLabel": "If yes, please provide:"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "number": 9,
+        "title": "9. Competitors",
+        "questions": [
+          {
+            "id": 165,
+            "label": "Who are your main competitors?",
+            "type": "table",
+            "rows": [
+              [
+                "Competitor",
+                "Website / Social Page",
+                "Notes"
+              ],
+              [
+                "[Please enter]",
+                "[Please enter]",
+                "[Please enter]"
+              ],
+              [
+                "[Please enter]",
+                "[Please enter]",
+                "[Please enter]"
+              ],
+              [
+                "[Please enter]",
+                "[Please enter]",
+                "[Please enter]"
+              ]
+            ]
+          },
+          {
+            "id": 168,
+            "label": "Which competitors do you consider best-in-class from a marketing perspective? Why?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 170,
+            "label": "Are there any competitor activities or campaigns you particularly like or dislike?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          }
+        ]
+      },
+      {
+        "number": 10,
+        "title": "10. Media Channels",
+        "questions": [
+          {
+            "id": 173,
+            "label": "Which channels are you currently using?",
+            "type": "checkbox",
+            "options": [
+              "Google Search",
+              "Google Performance Max",
+              "Google Display",
+              "YouTube",
+              "Meta / Facebook",
+              "Instagram",
+              "TikTok",
+              "LinkedIn",
+              "Reddit",
+              "Microsoft / Bing Ads",
+              "Programmatic",
+              "SEO",
+              "Email Marketing",
+              "Influencer Marketing",
+              "Other"
+            ]
+          },
+          {
+            "id": 182,
+            "label": "Which channels would you like us to consider?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 184,
+            "label": "Are there any platforms that must be included or excluded?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 186,
+            "label": "Are you open to testing new channels?",
+            "type": "radio",
+            "options": [
+              "Yes",
+              "No",
+              "Depending on recommendation"
+            ]
+          }
+        ]
+      },
+      {
+        "number": 11,
+        "title": "11. Budget",
+        "questions": [
+          {
+            "id": 190,
+            "label": "What is the total marketing / media budget available for this campaign?",
+            "type": "text",
+            "placeholder": "[Please enter currency and amount]"
+          },
+          {
+            "id": 192,
+            "label": "Does this budget include agency fees and production costs?",
+            "type": "checkbox",
+            "options": [
+              "Media budget only",
+              "Inclusive of agency fees",
+              "Inclusive of creative / production costs",
+              "To be confirmed"
+            ]
+          },
+          {
+            "id": 195,
+            "label": "Do you have a preferred budget allocation by channel?",
+            "type": "radio",
+            "options": [
+              "Yes",
+              "No — Agency to recommend"
+            ],
+            "followups": [
+              {
+                "id": 197,
+                "label": "If yes, please specify:",
+                "type": "textarea",
+                "placeholder": "[Please enter]"
+              }
+            ]
+          },
+          {
+            "id": 199,
+            "label": "Is additional budget available if the campaign performs strongly?",
+            "type": "radio",
+            "options": [
+              "Yes",
+              "No",
+              "To be discussed"
+            ]
+          }
+        ]
+      },
+      {
+        "number": 12,
+        "title": "12. Campaign Timeline",
+        "questions": [
+          {
+            "id": 203,
+            "label": "Preferred campaign start date:",
+            "type": "date",
+            "placeholder": "[DD / MM / YYYY]"
+          },
+          {
+            "id": 205,
+            "label": "Preferred campaign end date:",
+            "type": "date",
+            "placeholder": "[DD / MM / YYYY]"
+          },
+          {
+            "id": 207,
+            "label": "Are there any key dates, events or seasonal periods we should consider?",
+            "type": "textarea",
+            "placeholder": "[Please enter]",
+            "help": [
+              "Examples:",
+              "• Product launch",
+              "• Open House",
+              "• Admissions deadline",
+              "• Promotion period",
+              "• Festival",
+              "• Peak sales season"
+            ]
+          },
+          {
+            "id": 216,
+            "label": "Are there any periods when advertising should be reduced or paused?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          }
+        ]
+      },
+      {
+        "number": 13,
+        "title": "13. Geographic Targeting",
+        "questions": [
+          {
+            "id": 219,
+            "label": "Which market(s) should the campaign target?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 221,
+            "label": "Should we target the entire country or specific cities / regions?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 223,
+            "label": "Are there priority locations?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 225,
+            "label": "Are there locations we should exclude?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "number": 14,
+        "title": "14. Creative Assets",
+        "questions": [
+          {
+            "id": 228,
+            "label": "What creative assets are currently available?",
+            "type": "checkbox",
+            "options": [
+              "Brand Images",
+              "Product Images",
+              "Lifestyle Images",
+              "Videos",
+              "Short-form Videos",
+              "Customer Testimonials",
+              "Case Studies",
+              "Infographics",
+              "Brochures",
+              "Existing Ads",
+              "Other"
+            ]
+          },
+          {
+            "id": 235,
+            "label": "Will your team provide campaign creative assets?",
+            "type": "radio",
+            "options": [
+              "Yes",
+              "No",
+              "Partially"
+            ]
+          },
+          {
+            "id": 238,
+            "label": "Do you require the Agency to develop:",
+            "type": "checkbox",
+            "options": [
+              "Advertising Copy",
+              "Static Visuals",
+              "Video Editing",
+              "Video Production",
+              "Motion Graphics",
+              "Landing Page",
+              "Other"
+            ]
+          },
+          {
+            "id": 243,
+            "label": "Please share examples of past creative that performed well.",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          }
+        ]
+      },
+      {
+        "number": 15,
+        "title": "15. Website & Landing Page",
+        "questions": [
+          {
+            "id": 246,
+            "label": "Campaign landing page URL:",
+            "type": "text",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 248,
+            "label": "Is a dedicated campaign landing page available?",
+            "type": "radio",
+            "options": [
+              "Yes",
+              "No",
+              "To be developed"
+            ]
+          },
+          {
+            "id": 251,
+            "label": "Who will be responsible for landing page updates?",
+            "type": "radio",
+            "options": [
+              "Client",
+              "Agency",
+              "Third-party developer"
+            ]
+          },
+          {
+            "id": 254,
+            "label": "Are there any known website or conversion issues?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          }
+        ]
+      },
+      {
+        "number": 16,
+        "title": "16. Tracking & Data",
+        "questions": [
+          {
+            "id": 257,
+            "label": "Which analytics / tracking systems are currently installed?",
+            "type": "checkbox",
+            "options": [
+              "Google Analytics 4",
+              "Google Tag Manager",
+              "Meta Pixel",
+              "Meta Conversions API",
+              "Google Ads Conversion Tracking",
+              "LinkedIn Insight Tag",
+              "TikTok Pixel",
+              "CRM Tracking",
+              "Other"
+            ]
+          },
+          {
+            "id": 263,
+            "label": "Which CRM system do you use?",
+            "type": "checkbox",
+            "options": [
+              "HubSpot",
+              "Salesforce",
+              "Zoho",
+              "Microsoft Dynamics",
+              "Custom CRM",
+              "None",
+              "Other"
+            ]
+          },
+          {
+            "id": 268,
+            "label": "Can advertising platforms be integrated with your CRM?",
+            "type": "radio",
+            "options": [
+              "Yes",
+              "No",
+              "Not sure"
+            ]
+          },
+          {
+            "id": 271,
+            "label": "What is currently considered a conversion?",
+            "type": "textarea",
+            "placeholder": "[Please enter]",
+            "help": [
+              "Examples:",
+              "• Form submission",
+              "• Phone call",
+              "• WhatsApp enquiry",
+              "• Application",
+              "• Booking",
+              "• Purchase",
+              "• Qualified lead"
+            ]
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "number": 17,
+        "title": "17. Lead Management & Sales Process",
+        "questions": [
+          {
+            "id": 282,
+            "label": "For lead-generation campaigns.",
+            "type": "note"
+          },
+          {
+            "id": 283,
+            "label": "What happens after a lead is generated?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 285,
+            "label": "Who follows up with the leads?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 287,
+            "label": "What is your typical response time to a new lead?",
+            "type": "radio",
+            "options": [
+              "Within 5 minutes",
+              "Within 1 hour",
+              "Same day",
+              "Within 24 hours",
+              "More than 24 hours"
+            ]
+          },
+          {
+            "id": 291,
+            "label": "How do you define a qualified lead?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 293,
+            "label": "What percentage of leads typically become qualified leads?",
+            "type": "text",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 295,
+            "label": "What percentage of qualified leads typically become customers?",
+            "type": "text",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 297,
+            "label": "Can the sales team provide lead-quality feedback to the Agency?",
+            "type": "radio",
+            "options": [
+              "Yes",
+              "No",
+              "To be discussed"
+            ]
+          }
+        ]
+      },
+      {
+        "number": 18,
+        "title": "18. Historical Data & Access",
+        "questions": [
+          {
+            "id": 301,
+            "label": "Please indicate which historical data can be shared with us.",
+            "type": "checkbox",
+            "options": [
+              "Google Ads",
+              "Meta Ads",
+              "TikTok Ads",
+              "LinkedIn Ads",
+              "Google Analytics",
+              "CRM Data",
+              "Sales Data",
+              "Previous Media Plans",
+              "Previous Campaign Reports",
+              "Creative Performance Data"
+            ]
+          },
+          {
+            "id": 307,
+            "label": "How much historical data is available?",
+            "type": "radio",
+            "options": [
+              "Less than 3 months",
+              "3–6 months",
+              "6–12 months",
+              "More than 12 months"
+            ]
+          }
+        ]
+      },
+      {
+        "number": 19,
+        "title": "19. Reporting Requirements",
+        "questions": [
+          {
+            "id": 311,
+            "label": "How frequently would you like to receive campaign reports?",
+            "type": "radio",
+            "options": [
+              "Weekly",
+              "Bi-weekly",
+              "Monthly",
+              "Campaign-end only",
+              "Other"
+            ]
+          },
+          {
+            "id": 315,
+            "label": "Who will be the main audience for the report?",
+            "type": "checkbox",
+            "options": [
+              "Marketing Team",
+              "Marketing Manager",
+              "CMO / Marketing Director",
+              "Sales Team",
+              "Senior Management",
+              "Regional / Global Team",
+              "Other"
+            ]
+          },
+          {
+            "id": 320,
+            "label": "What information is most important for your reporting?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 322,
+            "label": "Do you require a real-time dashboard?",
+            "type": "radio",
+            "options": [
+              "Yes",
+              "No",
+              "To be discussed"
+            ]
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "number": 20,
+        "title": "20. Approval Process",
+        "questions": [
+          {
+            "id": 326,
+            "label": "Who is the main project owner / point of contact?",
+            "type": "note"
+          },
+          {
+            "id": 327,
+            "label": "Name:",
+            "type": "text",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 328,
+            "label": "Role:",
+            "type": "text",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 329,
+            "label": "Email:",
+            "type": "email",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 330,
+            "label": "Who is responsible for approving:",
+            "type": "table",
+            "rows": [
+              [
+                "Item",
+                "Approver"
+              ],
+              [
+                "Strategy",
+                "[Please enter]"
+              ],
+              [
+                "Media Plan",
+                "[Please enter]"
+              ],
+              [
+                "Budget",
+                "[Please enter]"
+              ],
+              [
+                "Creative",
+                "[Please enter]"
+              ],
+              [
+                "Advertising Copy",
+                "[Please enter]"
+              ],
+              [
+                "Campaign Launch",
+                "[Please enter]"
+              ]
+            ]
+          },
+          {
+            "id": 333,
+            "label": "What is the typical approval turnaround time?",
+            "type": "text",
+            "placeholder": "[Please enter]"
+          }
+        ]
+      },
+      {
+        "number": 21,
+        "title": "21. Mandatory Requirements & Restrictions",
+        "questions": [
+          {
+            "id": 336,
+            "label": "Are there any legal, compliance or regulatory requirements we should be aware of?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 338,
+            "label": "Are there any mandatory disclaimers?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 340,
+            "label": "Are there specific targeting, creative or communication restrictions?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 342,
+            "label": "Are there any internal brand policies that may affect campaign execution?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          }
+        ]
+      },
+      {
+        "number": 22,
+        "title": "22. Client Expectations",
+        "questions": [
+          {
+            "id": 345,
+            "label": "What are the three most important outcomes you expect from the Agency?",
+            "type": "note"
+          },
+          {
+            "id": 346,
+            "label": "1.",
+            "type": "text",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 347,
+            "label": "2.",
+            "type": "text",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 348,
+            "label": "3.",
+            "type": "text",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 349,
+            "label": "What would make this partnership successful from your perspective?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          },
+          {
+            "id": 351,
+            "label": "Are there any concerns or challenges you would like us to address from the beginning?",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          }
+        ]
+      },
+      {
+        "number": 23,
+        "title": "23. Additional Information",
+        "questions": [
+          {
+            "id": 354,
+            "label": "Please provide any other information that may help us better understand your business, campaign, audience or expectations.",
+            "type": "textarea",
+            "placeholder": "[Please enter]"
+          }
+        ]
+      }
+    ]
+  ],
+  "version": 1,
+  "stepNames": [
+    "Company & goals",
+    "Audience & offer",
+    "Media & budget",
+    "Assets & tracking",
+    "Sales & reporting",
+    "Approvals & expectations"
+  ]
+}

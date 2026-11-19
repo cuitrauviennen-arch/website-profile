@@ -470,6 +470,54 @@ export interface ApiAwardAward extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiClientBriefClientBrief extends Struct.CollectionTypeSchema {
+  collectionName: 'client_briefs';
+  info: {
+    displayName: 'Client Brief';
+    pluralName: 'client-briefs';
+    singularName: 'client-brief';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    answerHash: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private;
+    answers: Schema.Attribute.JSON & Schema.Attribute.Required;
+    company: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{ maxLength: 200 }>;
+    contactEmail: Schema.Attribute.Email & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::client-brief.client-brief'
+    > &
+      Schema.Attribute.Private;
+    notificationAttempts: Schema.Attribute.Integer &
+      Schema.Attribute.Private &
+      Schema.Attribute.DefaultTo<0>;
+    notificationDueAt: Schema.Attribute.DateTime & Schema.Attribute.Private;
+    notificationStatus: Schema.Attribute.Enumeration<
+      ['pending', 'sending', 'sent', 'failed']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'pending'>;
+    publishedAt: Schema.Attribute.DateTime;
+    submissionId: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private &
+      Schema.Attribute.Unique;
+    templateVersion: Schema.Attribute.Integer & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiContactSubmissionContactSubmission
   extends Struct.CollectionTypeSchema {
   collectionName: 'contact_submissions';
@@ -1171,6 +1219,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::award.award': ApiAwardAward;
+      'api::client-brief.client-brief': ApiClientBriefClientBrief;
       'api::contact-submission.contact-submission': ApiContactSubmissionContactSubmission;
       'api::experience.experience': ApiExperienceExperience;
       'api::profile.profile': ApiProfileProfile;

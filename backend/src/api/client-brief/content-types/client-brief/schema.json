@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "client_briefs",
+  "info": {
+    "singularName": "client-brief",
+    "pluralName": "client-briefs",
+    "displayName": "Client Brief"
+  },
+  "options": { "draftAndPublish": false },
+  "attributes": {
+    "company": { "type": "string", "maxLength": 200 },
+    "contactEmail": { "type": "email", "required": true },
+    "templateVersion": { "type": "integer", "required": true },
+    "answers": { "type": "json", "required": true },
+    "submissionId": { "type": "string", "unique": true, "required": true, "private": true },
+    "answerHash": { "type": "string", "required": true, "private": true },
+    "notificationStatus": {
+      "type": "enumeration",
+      "enum": ["pending", "sending", "sent", "failed"],
+      "default": "pending",
+      "required": true
+    },
+    "notificationAttempts": { "type": "integer", "default": 0, "private": true },
+    "notificationDueAt": { "type": "datetime", "private": true }
+  }
+}
